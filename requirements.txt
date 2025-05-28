@@ -1,0 +1,35 @@
+# ReiBOT Simulation v0.01 - Python Dependencies
+# Core MCP and FastAPI dependencies
+fastmcp>=0.1.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+
+# Web interface dependencies
+flask>=3.0.0
+flask-socketio>=5.3.0
+requests>=2.31.0
+
+# Additional FastAPI middleware
+python-multipart>=0.0.6
+
+# Development and testing (optional)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# System dependencies notes:
+# The following must be installed via system packages (apt):
+# - ROS 2 Kilted: sudo apt install ros-kilted-desktop
+# - ROS Python packages: sudo apt install ros-kilted-rclpy ros-kilted-geometry-msgs ros-kilted-std-msgs
+# - ROS Bridge: sudo apt install ros-kilted-rosbridge-server
+# 
+# Additional system packages that may be needed:
+# - PyYAML: sudo pip3 install PyYAML --break-system-packages
+# - pymongo: sudo pip3 install pymongo --break-system-packages
+# - argcomplete: sudo pip3 install argcomplete --break-system-packages
+# - Pillow: sudo pip3 install Pillow --break-system-packages
+# - tornado: sudo pip3 install tornado --break-system-packages
+#
+# Virtual environment setup:
+# python3 -m venv venv
+# source venv/bin/activate
+# pip install -r requirements.txt 

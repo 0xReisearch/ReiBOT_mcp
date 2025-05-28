@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReiBOT simulation v0.01</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ReiBOT simulation v0.01</h1>
+            <div class="status-indicator">
+                <span id="connection-status">Disconnected</span>
+                <span id="mode-indicator">Mode: Simulation</span>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="visualization-container">
+                <div id="robot-canvas"></div>
+            </div>
+            
+            <div class="control-panel">
+                <div class="status-panel">
+                    <h2>Robot Status</h2>
+                    <div class="status-item">
+                        <span class="label">Status:</span>
+                        <span id="robot-status">Idle</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Battery:</span>
+                        <span id="battery-level">100%</span>
+                        <div class="battery-bar">
+                            <div id="battery-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Position:</span>
+                        <span id="position-value">X: 0.00, Y: 0.00, Z: 0.00</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Orientation:</span>
+                        <span id="orientation-value">Roll: 0.00, Pitch: 0.00, Yaw: 0.00</span>
+                    </div>
+                </div>
+                
+                <div class="commands-section">
+                    <h2>Commands Received</h2>
+                    <div id="commands-log"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="log-panel">
+            <h2>Event Log</h2>
+            <div id="event-log"></div>
+        </div>
+    </div>
+    
+    <script src="/static/js/visualization.js"></script>
+</body>
+</html>
